@@ -111,6 +111,7 @@ pub fn new() -> ServerPtr {
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
     {
         if !display_service::capture_cursor_embedded() {
+            /*
             server.add_service(Box::new(input_service::new_cursor()));
             server.add_service(Box::new(input_service::new_pos()));
             #[cfg(target_os = "linux")]
@@ -120,6 +121,7 @@ pub fn new() -> ServerPtr {
             }
             #[cfg(not(target_os = "linux"))]
             server.add_service(Box::new(input_service::new_window_focus()));
+            */
         }
     }
     Arc::new(RwLock::new(server))
