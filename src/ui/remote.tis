@@ -420,7 +420,7 @@ handler.setCursorPosition = function(x, y) {
         top: y + "px",
     };
     if (cursor_img.style#display == 'none') {
-        cursor_img.style#display = "block";
+        // cursor_img.style#display = "block";
     }
 }
 
